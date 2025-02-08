@@ -13,11 +13,14 @@ def words(text):
 def characters(text):
     char_dictionary = {}
     lowered_string = text.lower()
-    alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    lowered_letters = list(lowered_string)
+    alphabet = [' ', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
     for letter in alphabet:
         count = 0
-        for character in lowered_string:
+        for character in lowered_letters:
             if character == letter:
-                count += 0
-    char_dictionary[letter] = count
+                count += 1
+        char_dictionary[letter] = count
     return char_dictionary
+
+main()
